@@ -14,9 +14,9 @@ function ticker
     end
 
     if test -z "$NO_COLOR"
-        set COLOR_BOLD "\e[1;37m"
-        set COLOR_GREEN "\e[32m"
-        set COLOR_RED "\e[31m"
+        set -q COLOR_BOLD || set COLOR_BOLD "\e[1;37m"
+        set -q COLOR_GREEN || set COLOR_GREEN "\e[32m"
+        set -q COLOR_RED || set COLOR_RED "\e[31m"
         set COLOR_RESET "\e[00m"
     end
 
